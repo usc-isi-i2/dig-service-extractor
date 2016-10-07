@@ -2,7 +2,7 @@
 # @Author: ZwEin
 # @Date:   2016-10-05 16:01:52
 # @Last Modified by:   ZwEin
-# @Last Modified time: 2016-10-07 13:55:33
+# @Last Modified time: 2016-10-07 14:00:32
 
 import os
 import json
@@ -12,10 +12,7 @@ from digDictionaryExtractor.populate_trie import populate_trie
 from digDictionaryExtractor.name_dictionary_extractor import get_name_dictionary_extractor
 from digExtractor.extractor_processor import ExtractorProcessor
 
-def load_names(path=os.path.join(os.path.dirname(__file__), 'names.json')):
-    return json.load(open(path, 'r'))
-
-names = load_names()
+from names import names
 names_trie = populate_trie(iter(names))
 
 
