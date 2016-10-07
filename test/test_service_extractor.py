@@ -19,7 +19,7 @@ class TestServiceExtractorMethods(unittest.TestCase):
         pass
 
     def test_age_extractor(self):
-        doc = {'content': "FOV slkjdflksdjflk", 'b': 'world'}
+        doc = {'content': ['FOV', 'HELLO', 'WORLD'], 'b': 'world'}
 
         extractor = ServiceExtractor().set_metadata({'extractor': 'service'})
         extractor_processor = ExtractorProcessor().set_input_fields(['content']).set_output_field('extracted').set_extractor(extractor)
